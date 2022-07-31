@@ -58,17 +58,17 @@ int main()
     bool s1 = xs.Initialize();
     bool s = es.Initialize();
     std::cout << "Waiting for js plugin" << std::endl;
-    while (xs.GetNumberConnected() < 1);
+    while (es.GetNumberConnected() < 1);
 
 #if 1
     while (true)
     {
         //std::this_thread::sleep_for(std::chrono::milliseconds(50));
 
-        auto& a = xs.GetIDs();
+        auto& a = es.GetIDs();
         if (a.size() <= 0)
             continue;
-        XboxAxes(a[0]);
+        LogitechAxes(a[0]);
     }
 #endif
 
