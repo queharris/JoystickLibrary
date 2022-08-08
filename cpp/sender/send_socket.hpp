@@ -1,9 +1,18 @@
+#ifndef SEND_SOCKET_HPP
+#define SEND_SOCKET_HPP
+
 #include <vector>
 #include <string>
 #include <netinet/in.h>
 #include <stdlib.h>
 #include <sys/socket.h>
 #include <sys/types.h>
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+#include "send_socket.hpp"
+#define PORT 8080
 #define MAXLINE 1024
 
 void BindSocketToPort(const int sockfd, const int port, sockaddr_in& recv_addr, socklen_t &len);
@@ -14,3 +23,5 @@ void ReceiveString(const int sockfd, sockaddr_in& recv_addr, char *buffer, int m
 void PrintArray(int arrayReceiver[5], int arraySize);
 void PrintString(std::string buffer);
 sockaddr_in SetSocketAddress(int port);
+
+#endif
