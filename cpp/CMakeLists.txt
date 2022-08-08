@@ -10,4 +10,6 @@ set (CMAKE_CXX_STANDARD 11)
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
 add_subdirectory(src)
+add_subdirectory(sender)
 add_subdirectory(sample)
+
